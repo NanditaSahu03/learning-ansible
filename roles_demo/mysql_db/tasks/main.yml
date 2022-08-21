@@ -2,13 +2,13 @@
 
     - name: Download MySQL Repository 
       get_url:
-         url: https://dev.mysql.com/get/mysql-apt-config_0.8.20-1_all.deb
+         url: https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb
          dest: /home/nanditasahu031
       become: yes
 
     - name: Add MySQL Repository
       apt: 
-         deb: ./mysql-apt-config_0.8.20-1_all.deb
+         deb: "/home/nanditasahu031/mysql-apt-config_0.8.22-1_all.deb"
       become: yes 
 
     - name: Install and Configure Database
